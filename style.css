@@ -1,0 +1,574 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body::-webkit-scrollbar{
+    display: block;
+    width:5px;
+    background-color: #eb2424;
+}
+body::-webkit-scrollbar-thumb{
+   border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+   
+}
+#nav{
+    height:120px;
+    width:100%;
+    
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 100px;
+    align-items: center;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+#minicircle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 8px;
+    height: 8px;
+    position: fixed;
+    z-index: 99999;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+#cursor-blur{
+    height:300px;
+    width:300px;
+    border-radius:50%;
+    background-color: #eb242497;
+    position: fixed;
+    filter: blur(60px);
+    z-index:9;
+
+    
+   
+
+}
+#nav img{
+    height:80px;
+}
+#nav h4{
+    font-weight: 500px;
+    font-size: 14px;
+    transition: all linear 0.5s;
+    cursor: pointer;
+}
+#nav h4:hover{
+    color: #c30b0b;
+    
+
+}
+.text:hover{
+    color: #eb2424;
+    transition: all linear 0.5s;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+
+
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: centre;
+    z-index: 10;
+    
+    
+    
+
+}
+#page1 #arrow {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    border: 2px solid #c30b0b;
+    position: absolute;
+    display: flex;
+    left: -3%;
+    bottom: -3%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+  }
+  #page1 #arrow i {
+    font-size: 50px;
+    font-weight: 100;
+  }
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #ff0505;
+  }
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+
+}
+#page1 h1::before{
+    content: "EAT. SIT. PLAY.";
+    position:absolute;
+    top:-4px;
+    color: black;
+    left: -4px;
+    -webkit-text-stroke: 2px #eb2424;
+    z-index: -1;
+
+}
+#page h2{
+    font-weight: 900;
+    font-size: 1px;
+    
+}
+#page1 h3{
+    font-size:  16px;
+    width:50%;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+#page2{
+   min-height:100vh;
+    width:100%;
+    z-index: 10;
+   
+
+}
+#scroller, .picture{
+    /* z-index: 99; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller h4{
+    display:inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    margin-right:10px;
+    -webkit-text-stroke: 3px #eb2424;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all linear 0.5s;
+}
+#scroller h4:hover{
+    color: #eb2424;
+}
+.picture::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in1 , .picturein{
+    display: inline-block;
+    white-space:nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.picturein{
+    animation-duration: 27s;
+    margin: 30vh 0;
+}
+.picturein img{
+    -webkit-transform: rotate(-3deg);
+    padding: 40px;
+    height: 50vh;
+}
+#scroller-in2{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    from{
+        translate: translatex(0);
+
+    }to{
+        transform: translatex(-100%);
+    }
+}
+
+#aboutus{
+    height: 40vh;
+    margin-top: 100px;
+    width:100%;
+   
+    display: flex;
+    align-items: centre;
+    justify-content: space-between;
+    padding: 30px 80px;
+    z-index: 10;
+
+}
+
+#aboutus img{
+     height: 240px;
+     
+     width: 240px;
+     border-radius: 20px;
+     object-fit: cover;
+     margin-top: 50px;
+}
+#about{
+    width:50%;
+    text-align: center;
+    
+}
+#about h3{
+    font-size:70px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    
+}
+#about p{
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 500;
+    position: relative;
+   
+}
+#cards-container{
+    
+    height: 60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 170px;
+    gap: 70px;
+
+}
+.card{
+    
+    height: 90%;
+    width: 23%;
+    background-color: black;
+    border-radius:30px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+    
+    margin-top: 30px;
+
+    
+}
+#card1{
+    transition: all ease 0.5s;
+    background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_middle/5eb854accac7b1d9b8b5abdab81475b07a27f783-592x334.jpg);
+}
+#card2{
+    background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_middle/04c23f375a17da6e60d3b9d0c062eb7311186ba7-592x334.jpg);
+}
+#card3{
+    background-image: url(https://static.cdprojektred.com/cms.cdprojektred.com/16x9_middle/396bd0725a9877b41c83b45d87923d369a729cf3-592x334.jpg);
+
+}
+.overlay{
+    height:100%;
+    width:100%;
+    background-color: #eb2424;
+    padding: 20px;
+    padding-top: 90px;
+    opacity: 0;
+    z-index: 99;
+    position: relative;
+    transition: all ease 1s;
+}
+.overlay h4{
+    color:black;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+.overlay p{
+    color:black;
+    align-items: centre;
+    font-weight: 550;
+}
+.overlay:hover{
+    opacity: 1;
+    border-radius: 30px;
+}
+#green-div{
+    height:30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left bottom,#dc2323,#f5421a);
+    font-size: 10px;
+    margin-top: 70px;
+
+}
+#green-div h4{
+    width:50%;
+    font-size:2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+
+}
+#green-div img{
+    height:100%;
+    object-fit: cover;
+    width: 15%;
+}
+#page-3{
+    height:100vh;
+    width:100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page-3 p{
+    font-size: 25px;
+    width: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+#page-3 img{
+    position: absolute;
+    height: 60px;
+
+}
+#page-3 #colon1{
+    left: 20%;
+    top: 20%;
+}
+
+#page-3 #colon2{
+    right: 20%;
+    bottom: 20%;
+}
+.page4{
+    height:50vh;
+    width:100%;
+    /* background-color: #b6eb24; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:70px;
+    position: relative;
+}
+.ele{
+    height: 57%;
+    width:25%;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+}
+.ele h2{
+    height: 100%;
+    width: 100%;
+    background-color: #ff0505;
+    align-items: center;
+    justify-content: center;
+    display:flex ;
+    font-size: 20px;
+    white-space: nowrap;
+    font-weight: 900;
+    position:absolute;
+    z-index: 10;
+    
+
+}
+.ele img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    /* scale:1.5;
+    transition:all linear 0.8s; */
+    
+}
+.ele:hover h2{
+    color: white;
+    background-color: transparent;
+    transition: all linear 0.8s;
+
+}
+.ele:hover img{
+    scale:1.5;
+    transition:all linear 0.8s;
+}
+.page4::before{
+    content: "WHAT ARE YOU WAITING FOR";
+    position: absolute;
+    
+    bottom:280px;
+    font-size: 73px;
+    font-weight: 900;
+    -webkit-text-stroke: 2px white;
+    color: black;
+   font-family: Arial,sans-serif;
+}
+#footer{
+    min-height:60vh;
+    width:100%;
+    background: linear-gradient(to left bottom,#c70808,#c30b0b);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+    font-size: 80px;
+    color: white;
+ 
+  
+
+    
+}
+#btn1{
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: end; */
+    background-color: transparent;
+    border: 2px solid red;
+    color:white;
+    font-weight: 400;
+    width:100px;
+    height: 45px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 10px;
+    /* align-content: end; */
+    transition: all 0.5s ease-out;} 
+#btn1:hover{
+    background-color: #ffffffde;
+    color: red;
+    font-weight:800;
+    font-size: 15px;
+    /* margin-left: 500px; */
+} 
+#footer img{
+    height: 80px;
+    top: -70px;
+    position: relative;
+}
+.ft{
+   
+    width: 20%;
+    
+    height: 40%;
+    position: relative;
+    top: -30px;
+   
+    
+}
+#footer h4{
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 27%;
+    font-weight: 900;
+}
+#footer h5{
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 27%;
+    font-weight: 600;
+}
+#footer #dot{
+    min-height: 98%;
+    width:30%;
+    position: absolute;
+    left:0px;
+    top:5px;
+    
+    z-index: 0;
+    object-fit: cover;
+}
+
+/* media queries for */
+
+@media (max-width: 1024px){
+    #nav h4{
+       
+        font-size: 13px;}
+    #page1 h1{
+            
+        font-size: 80px;
+        font-weight: 900;
+        position: relative;
+        
+        }
+   
+        #aboutus{
+            height: 40vh;
+            margin-top: 30px;
+            width:100%;
+           
+            display: flex;
+            align-items: centre;
+            justify-content: space-between;
+            padding: 30px 80px;
+            z-index: 10;
+            
+        
+        }
+      
+        
+        #aboutus img{
+             height: 300px;
+             
+             width: 150px;
+             border-radius: 20px;
+             object-fit: cover;
+             margin-top: 50px;
+             margin-left: -40px;
+             margin-right: -40px;
+             
+        }
+        #about{
+            width:60%;
+            text-align: center;
+            
+        }
+        #about h3{
+            font-size:70px;
+            font-weight: 900;
+            padding-bottom: 27px;
+            
+        }
+        #about p{
+            font-size: 22px;
+            line-height: 35px;
+            font-weight: 500;
+            position: relative;
+           
+        }    
+}
